@@ -395,7 +395,7 @@
     <string name="status_bar_logo_summary">Enable to show Validus logo on statusbar</string>
     <string name="status_bar_logo_style_title">Validus logo style</string>
     <string name="status_bar_logo_color_title">Select color</string>
-   
+
     <!-- Day/Night -->
     <string name="daynight_title">Theme resources</string>
     <string name="daynight_header_title">Theme resources</string>
@@ -544,5 +544,22 @@
     <!-- kill app long press back -->
     <string name="kill_app_longpress_back">Kill app back button</string>
     <string name="kill_app_longpress_back_summary">Kill the foreground app by long-pressing the back key</string>
+
+    <!-- Hardware key rebinding -->
+    <string name="button_pref_title">Hardware keys</string>
+    <string name="hardware_keys_back_key_title">Back button</string>
+    <string name="hardware_keys_home_key_title">Home button</string>
+    <string name="hardware_keys_menu_key_title">Menu button</string>
+    <string name="hardware_keys_short_press_title">Short press action</string>
+    <string name="hardware_keys_long_press_title">Long press action</string>
+    <string name="hardware_keys_double_tap_title">Double tap action</string>
+    <string name="hardware_keys_action_nothing">No action</string>
+    <string name="hardware_keys_action_menu">Open/close menu</string>
+    <string name="hardware_keys_action_app_switch">Recent apps switcher</string>
+    <string name="hardware_keys_action_search">Search assistant</string>
+    <string name="hardware_keys_action_voice_search">Voice search</string>
+    <string name="hardware_keys_action_in_app_search">In-app search</string>
+    <string name="hardware_keys_action_launch_camera">Launch camera</string>
+    <string name="hardware_keys_action_sleep">Turn screen off</string>
 
 </resources>
