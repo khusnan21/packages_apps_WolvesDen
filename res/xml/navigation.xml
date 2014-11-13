@@ -31,6 +31,11 @@
         android:title="@string/button_title"
         android:fragment="com.gzr.wolvesden.fragments.Button" />
 
+   <Preference
+        android:key="button_settings"
+        android:title="@string/button_pref_title"
+        android:fragment="com.gzr.wolvesden.fragments.ButtonSettings" />
+
     <!--<Preference
         android:key="various_navigation"
         android:fragment="com.gzr.wolvesden.fragments.VariousNavigation"
