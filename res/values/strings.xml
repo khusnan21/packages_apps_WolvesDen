@@ -838,4 +838,8 @@
     <string name="screen_off_animation_default">Default</string>
     <string name="screen_off_animation_crt">CRT</string>
     <string name="screen_off_animation_scale">Scale</string>
+
+    <!-- Disable QS on secure Lockscreen -->
+    <string name="lockscreen_qs_disabled_title">No QS when secured</string>
+    <string name="lockscreen_qs_disabled_summary">Disable quick settings tiles on secured lockscreen</string>
 </resources>
