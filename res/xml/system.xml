@@ -55,4 +55,9 @@
         android:fragment="com.gzr.wolvesden.fragments.VariousSystem"
         android:title="@string/various_system_title" />
 
+        <PreferenceScreen
+        android:key="animations"
+        android:fragment="com.gzr.tavern.fragments.Animations"
+        android:title="@string/animations" />
+
 </PreferenceScreen>
