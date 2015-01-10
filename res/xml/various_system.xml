@@ -19,6 +19,11 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <Preference
+            android:key="batterybar"
+            android:fragment="com.gzr.wolvesden.fragments.BatteryBarSettings"
+            android:title="@string/batterybar_title"/>
+
     <com.gzr.wolvesden.preference.SystemSettingSwitchPreference
         android:key="wake_when_plugged_or_unplugged"
         android:title="@string/wake_when_plugged_or_unplugged_title"
