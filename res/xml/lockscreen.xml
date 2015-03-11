@@ -29,6 +29,11 @@
     </Preference>
 
     <Preference
+            android:key="lockscreen_weather"
+            android:title="@string/lockscreen_weather_title"
+            android:fragment="com.gzr.wolvesden.fragments.LockScreenWeatherSettings" />
+
+    <Preference
         android:key="various_lockscreen"
         android:title="@string/various_lockscreen_title"
         android:fragment="com.gzr.wolvesden.fragments.VariousLockscreen" />
