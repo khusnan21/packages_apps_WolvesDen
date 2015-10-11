@@ -37,7 +37,11 @@ import com.android.settings.Utils;
 public class Navbar extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
+    private static final String KILL_APP_LONGPRESS_BACK = "kill_app_longpress_back";
+
     private SwitchPreference mNavbarToggle;
+
+    private SwitchPreference mKillAppLongPressBack;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -55,6 +59,13 @@ public class Navbar extends SettingsPreferenceFragment implements
                 UserHandle.USER_CURRENT) == 1;
         mNavbarToggle.setChecked(enabled);
         mNavbarToggle.setOnPreferenceChangeListener(this);
+
+        // kill-app long press back
+        mKillAppLongPressBack = (SwitchPreference) findPreference(KILL_APP_LONGPRESS_BACK);
+        mKillAppLongPressBack.setOnPreferenceChangeListener(this);
+        int killAppLongPressBack = Settings.Secure.getInt(getContentResolver(),
+                KILL_APP_LONGPRESS_BACK, 0);
+        mKillAppLongPressBack.setChecked(killAppLongPressBack != 0);
     }
 
     @Override
@@ -75,6 +86,11 @@ public class Navbar extends SettingsPreferenceFragment implements
                     Settings.Secure.NAVIGATION_BAR_ENABLED, value ? 1 : 0,
                     UserHandle.USER_CURRENT);
             mNavbarToggle.setChecked(value);
+            return true;
+        } else if (preference == mKillAppLongPressBack) {
+            boolean value = (Boolean) newValue;
+            Settings.Secure.putInt(getContentResolver(),
+		KILL_APP_LONGPRESS_BACK, value ? 1 : 0);
             return true;
         }
         return false;
