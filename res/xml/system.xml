@@ -26,4 +26,10 @@
         android:title="@string/button_title"
         android:fragment="com.gzr.wolvesden.fragments.Button" />
 
+    <com.gzr.wolvesden.preference.SystemSettingSwitchPreference
+        android:key="toast_icon"
+        android:title="@string/toast_icon_title"
+        android:summary="@string/toast_icon_summary"
+        android:defaultValue="false" />
+
 </PreferenceScreen>
