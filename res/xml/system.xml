@@ -51,13 +51,13 @@
         android:fragment="com.gzr.wolvesden.fragments.Torch" />
 
     <Preference
+        android:key="animations"
+        android:fragment="com.gzr.wolvesden.fragments.Animations"
+        android:title="@string/animations" />
+
+    <Preference
         android:key="various_system"
         android:fragment="com.gzr.wolvesden.fragments.VariousSystem"
         android:title="@string/various_system_title" />
-
-        <PreferenceScreen
-        android:key="animations"
-        android:fragment="com.gzr.tavern.fragments.Animations"
-        android:title="@string/animations" />
 
 </PreferenceScreen>
