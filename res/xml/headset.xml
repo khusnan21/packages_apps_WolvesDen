@@ -16,13 +16,13 @@
  -->
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-    android:title="@string/multitasking_category" >
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <Preference
-        android:key="headset"
-        android:title="@string/headset_title"
-        android:fragment="com.gzr.wolvesden.fragments.Headset" />
+    <ListPreference
+        android:key="headset_connect_player"
+        android:title="@string/headset_connect_player_title"
+        android:entries="@array/headset_connect_player_entries"
+        android:entryValues="@array/headset_connect_player_values" />
 
 </PreferenceScreen>
 
