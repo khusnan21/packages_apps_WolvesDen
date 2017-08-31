@@ -38,4 +38,6 @@
     <string name="set">Set</string>
     <string name="color_default">Default</string>
 
+    <string name="double_tap_sleep_navbar">Double tap to sleep on navbar</string>
+
 </resources>
