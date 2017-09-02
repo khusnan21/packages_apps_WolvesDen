@@ -24,6 +24,12 @@
             android:fragment="com.gzr.wolvesden.fragments.BatteryBarSettings"
             android:title="@string/batterybar_title"/>
 
+    <Preference
+        android:key="wakelock_blocker"
+        android:title="@string/wakelock_blocker_title"
+        android:summary="@string/wakelock_blocker_summary"
+        android:fragment="com.gzr.wolvesden.fragments.WakeLockBlocker"/>
+
     <ListPreference
         android:key="systemui_theme_style"
         android:title="@string/systemui_theme_style_title"
