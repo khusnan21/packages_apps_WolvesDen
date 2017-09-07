@@ -31,4 +31,9 @@
         android:title="@string/battery_title"
         android:fragment="com.gzr.wolvesden.fragments.StatusbarBatteryStyle" />
 
+    <com.gzr.wolvesden.preference.SystemSettingSwitchPreference
+        android:key="double_tap_sleep_gesture"
+        android:title="@string/double_tap_sleep_gesture_title"
+        android:defaultValue="true" />
+
 </PreferenceScreen>
