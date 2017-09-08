@@ -159,6 +159,9 @@
     <string name="less_boring_heads_up_summary">Show heads up only for dialer or messaging app if they are not in foreground</string>
 
     <!-- Statusbar Tuner -->
-    <string name="statusbar_items_title">Statusbar items</string> 
+    <string name="statusbar_items_title">Statusbar items</string>
+
+    <!-- Power notification controls -->
+    <string name="power_notification_title">Power notification controls</string>
 
 </resources>
