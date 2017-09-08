@@ -39,6 +39,7 @@
     <string name="network_traffic_title">Network traffic</string>
     <string name="notification_light_settings">Notifications light</string>
     <string name="powermenu_title">Power menu</string>
+    <string name="navbar_title">Navbar</string>
     <string name="notifications_title">Notifications</string>
     <string name="various_system_title">Various</string>
     <string name="various_lockscreen_title">Various</string>
@@ -173,5 +174,8 @@
 
     <!-- Lockscreen icons -->
     <string name="lockscreen_tuner_title">Lockscreen shortcuts</string>
+
+    <!-- Navbar tuner -->
+    <string name="navbar_tuner_title">Navbar buttons</string>
 
 </resources>
