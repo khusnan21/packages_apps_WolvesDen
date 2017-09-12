@@ -30,6 +30,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.support.v7.preference.Preference;
+import android.support.v7.preference.ListPreference;
 import android.support.v14.preference.SwitchPreference;
 import android.provider.Settings;
 import android.view.LayoutInflater;
@@ -58,6 +59,8 @@ import java.util.List;
 public class RecentsSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, DialogInterface.OnDismissListener {
 
+    private static final String IMMERSIVE_RECENTS = "immersive_recents";
+
     private final static String[] sSupportedActions = new String[] {
         "org.adw.launcher.THEMES",
         "com.gau.go.launcherex.theme"
@@ -75,6 +78,8 @@ public class RecentsSettings extends SettingsPreferenceFragment implements
     private SwitchPreference mSlimToggle;
     private Preference mStockIconPacks;
 
+    private ListPreference mImmersiveRecents;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -89,6 +94,12 @@ public class RecentsSettings extends SettingsPreferenceFragment implements
         mSlimToggle.setChecked(enabled);
         mStockIconPacks.setEnabled(!enabled);
         mSlimToggle.setOnPreferenceChangeListener(this);
+
+        mImmersiveRecents = (ListPreference) findPreference(IMMERSIVE_RECENTS);
+        mImmersiveRecents.setValue(String.valueOf(Settings.System.getInt(
+                resolver, Settings.System.IMMERSIVE_RECENTS, 0)));
+        mImmersiveRecents.setSummary(mImmersiveRecents.getEntry());
+        mImmersiveRecents.setOnPreferenceChangeListener(this);
 
     }
 
@@ -106,6 +117,12 @@ public class RecentsSettings extends SettingsPreferenceFragment implements
                     UserHandle.USER_CURRENT);
             mSlimToggle.setChecked(value);
             mStockIconPacks.setEnabled(!value);
+            return true;
+        } else if (preference == mImmersiveRecents) {
+            Settings.System.putInt(getContentResolver(), Settings.System.IMMERSIVE_RECENTS,
+                    Integer.valueOf((String) newValue));
+            mImmersiveRecents.setValue(String.valueOf(newValue));
+            mImmersiveRecents.setSummary(mImmersiveRecents.getEntry());
             return true;
         }
         return false;
