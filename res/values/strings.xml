@@ -37,6 +37,7 @@
     <string name="leds_title">LED Lights</string>
     <string name="battery_light_settings">Battery charging light</string>
     <string name="network_traffic_title">Network traffic</string>
+    <string name="notification_light_settings">Notifications light</string>
 
     <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>
