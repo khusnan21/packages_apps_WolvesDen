@@ -36,6 +36,10 @@
         android:fragment="com.gzr.wolvesden.fragments.LedSettings"
         android:title="@string/leds_title" />
 
+    <Preference
+        android:title="@string/app_ops_settings"
+        android:fragment="com.android.settings.applications.AppOpsSummary"/>
+
     <com.gzr.wolvesden.preference.SystemSettingSwitchPreference
         android:key="toast_icon"
         android:title="@string/toast_icon_title"
