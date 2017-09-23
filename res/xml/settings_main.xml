@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2017 ValidusOs
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+
+    <PreferenceCategory
+        android:key="interface"
+        android:title="@string/interface_title">
+
+        <Preference
+            android:key="navigation_options"
+            android:fragment="com.gzr.wolvesden.NavbarSettings"
+            android:title="@string/navigationbar_settings_title" />
+
+        <Preference
+            android:key="lockscreen_settings"
+            android:fragment="com.gzr.wolvesden.LockScreenSettings"
+            android:title="@string/lockscreen_settings_title"/>
+
+        <Preference
+            android:key="notification_drawer_settings"
+            android:fragment="com.gzr.wolvesden.NotificationDrawerSettings"
+            android:title="@string/notification_drawer_settings_title"/>
+
+        <Preference
+            android:key="statusbar_settings"
+            android:fragment="com.gzr.wolvesden.StatusBarSettings"
+            android:title="@string/statusbar_settings_title"/>
+
+        <Preference
+            android:key="recent_settings"
+            android:fragment="com.gzr.wolvesden.RecentSettings"
+        android:title="@string/recent_settings_title"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="sys"
+        android:title="@string/sys">
+
+        <Preference
+            android:key="power_settings"
+            android:fragment="com.gzr.wolvesden.PowerSettings"
+        android:title="@string/power_settings_title"/>
+
+        <Preference
+            android:key="volumerocker_settings"
+            android:fragment="com.gzr.wolvesden.VolumeRockerSettings"
+            android:title="@string/volumerocker_settings_title"/>
+
+        <Preference
+            android:key="other_settings"
+            android:fragment="com.gzr.wolvesden.OtherSettings"
+        android:title="@string/other_settings_title"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="leds"
+        android:title="@string/leds" >
+
+        <Preference
+            android:key="charging_light"
+            android:fragment="com.gzr.wolvesden.BatteryLightSettings"
+            android:title="@string/battery_light_settings" />
+
+        <Preference
+            android:key="notification_light"
+            android:fragment="com.android.settings.applications.NotificationApps"
+            android:title="@string/notification_light_settings" />
+
+    </PreferenceCategory>
+</PreferenceScreen>
