@@ -19,6 +19,11 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <Preference
+        android:key="heads_up_notifications"
+        android:title="@string/heads_up_notifications"
+        android:fragment="com.gzr.wolvesden.fragments.HeadsUpSettings" />
+
     <!--<Preference
             android:title="@string/power_notification_title" >
             <intent android:action="android.intent.action.MAIN"
