@@ -44,8 +44,6 @@ import com.gzr.wolvesden.tabs.Lockscreen;
 import com.gzr.wolvesden.tabs.StatusBar;
 import com.gzr.wolvesden.tabs.Navigation;
 import com.gzr.wolvesden.tabs.MultiTasking;
-import com.gzr.wolvesden.tabs.Button;
-import com.gzr.wolvesden.tabs.QuickSettings;
 import com.gzr.wolvesden.PagerSlidingTabStrip;
 import com.android.settings.R;
 import com.android.settings.dashboard.SummaryLoader;
@@ -110,8 +108,6 @@ public class WolvesDen extends SettingsPreferenceFragment {
             frags[2] = new StatusBar();
             frags[3] = new Navigation();
             frags[4] = new MultiTasking();
-            frags[5] = new Button();
-            frags[6] = new QuickSettings();
         }
 
         @Override
@@ -137,9 +133,7 @@ public class WolvesDen extends SettingsPreferenceFragment {
                     getString(R.string.lockscreen_category),
                     getString(R.string.statusbar_category),
                     getString(R.string.navigation_category),
-                    getString(R.string.multitasking_category),
-                    getString(R.string.button_category),
-                    getString(R.string.quicksettings_category)};
+                    getString(R.string.multitasking_category)};
         return titleString;
     }
 
