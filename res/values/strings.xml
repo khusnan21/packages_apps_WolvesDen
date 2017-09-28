@@ -27,10 +27,11 @@
     <string name="navigation_category">Navigation</string>
     <string name="multitasking_category">Multi-Tasking</string>
     <string name="statusbar_notifications_category">Status bar notifications</string>
-    <string name="button_category">Button</string>
-    <string name="quicksettings_category">Quick settings</string>
 
+    <!-- Fragments -->
     <string name="headset_title">Headset</string>
+    <string name="button_title">Button</string>
+    <string name="quicksettings_title">Quick settings</string>
 
     <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>
