@@ -349,4 +349,7 @@
     <string name="pixel_navbar_anim_title">Pixel navbar animation</string>
     <string name="pixel_navbar_anim_summary">Requires a config change(display size, navbar position, reboot) themes may overwrite</string>
 
+    <!-- Toggle navigation bar -->
+    <string name="navigation_bar_enabled_title">Enable navigation bar</string>
+
 </resources>

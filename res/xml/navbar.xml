@@ -20,15 +20,27 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
     <Preference
-            android:title="@string/navbar_tuner_title" >
+            android:title="@string/navbar_tuner_title"
+            android:dependency="navigation_bar_enabled">
             <intent android:action="android.intent.action.MAIN"
                 android:targetPackage="com.android.systemui"
                 android:targetClass="com.android.systemui.tuner.NavBarActivity" />
     </Preference>
 
+    <SwitchPreference
+        android:key="navigation_bar_enabled"
+        android:title="@string/navigation_bar_enabled_title" />
+
+    <com.gzr.wolvesden.preference.SystemSettingSwitchPreference
+        android:key="double_tap_sleep_navbar"
+        android:title="@string/double_tap_sleep_navbar"
+        android:dependency="navigation_bar_enabled"
+        android:defaultValue="true" />
+
     <com.gzr.wolvesden.preference.SystemSettingSwitchPreference
         android:key="pixel_nav_animation"
         android:title="@string/pixel_navbar_anim_title"
+        android:dependency="navigation_bar_enabled"
         android:summary="@string/pixel_navbar_anim_summary"
         android:defaultValue="true" />
 
