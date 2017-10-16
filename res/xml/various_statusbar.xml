@@ -19,6 +19,13 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <ListPreference
+        android:key="ticker_mode"
+        android:entries="@array/ticker_mode_entries"
+        android:entryValues="@array/ticker_mode_values"
+        android:summary="%s"
+        android:title="@string/ticker_mode_title" />
+
     <com.gzr.wolvesden.preference.SystemSettingSwitchPreference
         android:key="double_tap_sleep_gesture"
         android:title="@string/double_tap_sleep_gesture_title"
