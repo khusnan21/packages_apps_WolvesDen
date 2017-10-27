@@ -21,10 +21,10 @@
     android:layout="@layout/tab"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <PreferenceScreen
- 	android:key="daynight"
- 	android:fragment="com.gzr.wolvesden.fragments.DayNightSettings"
- 	android:title="@string/daynight_title"/>
+    <Preference
+        android:key="animations"
+        android:fragment="com.gzr.wolvesden.fragments.Animations"
+        android:title="@string/animations" />
  
     <Preference
         android:title="@string/app_ops_settings"
@@ -50,15 +50,15 @@
         android:fragment="com.gzr.wolvesden.fragments.PowerMenu"
         android:title="@string/powermenu_title" />
 
+    <PreferenceScreen
+ 	android:key="daynight"
+ 	android:fragment="com.gzr.wolvesden.fragments.DayNightSettings"
+ 	android:title="@string/daynight_title"/>
+
     <Preference
         android:key="torch"
         android:title="@string/torch_title"
         android:fragment="com.gzr.wolvesden.fragments.Torch" />
-
-    <Preference
-        android:key="animations"
-        android:fragment="com.gzr.wolvesden.fragments.Animations"
-        android:title="@string/animations" />
 
     <Preference
         android:key="various_system"
