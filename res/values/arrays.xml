@@ -206,7 +206,7 @@
         <!-- Do not translate. -->
         <item>@string/night_mode_auto</item>
     </string-array>
- 
+
     <!-- These values should match up with the MODE_NIGHT constants in UiModeManager.
          Do not translate. -->
     <string-array name="night_mode_values" translatable="false">
@@ -218,6 +218,7 @@
         <item>3</item>
         <!-- Do not translate. -->
         <item>0</item>
+    </string-array>
 
     <!-- Listview animation -->
     <string-array name="listview_animation_entries">
@@ -323,7 +324,6 @@
         <item>1</item>
         <item>2</item>
         <item>3</item>
->>>>>>> 263d3301adddc82362edde9a9c0465e780de1e6e
     </string-array>
 
 </resources>
