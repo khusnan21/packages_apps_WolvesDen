@@ -50,7 +50,7 @@
         android:fragment="com.gzr.wolvesden.fragments.PowerMenu"
         android:title="@string/powermenu_title" />
 
-    <PreferenceScreen
+    <Preference
         android:key="daynight"
         android:fragment="com.gzr.wolvesden.fragments.DayNightSettings"
         android:title="@string/daynight_title"/>
