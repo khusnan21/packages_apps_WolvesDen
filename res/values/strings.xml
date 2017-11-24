@@ -61,7 +61,6 @@
     <string name="status_bar_quick_qs_pulldown">Quick Pulldown</string>
     <string name="status_bar_quick_qs_pulldown_summary">Pulldown statusbar from right side to show QS panel</string>
 
-    <string name="double_tap_sleep_navbar">Double tap to sleep on navbar</string>
     <string name="double_tap_sleep_lockscreen">Double tap to sleep on lockscreen</string>
     <string name="double_tap_sleep_gesture_title">Double tap status bar to sleep</string>
 
@@ -346,13 +345,6 @@
     <string name="dialog_pick_iconpack_title">Pick icon pack</string>
     <string name="default_iconpack_title">Default icons</string>
 
-    <!-- Navbar Animation -->
-    <string name="pixel_navbar_anim_title">Pixel navbar animation</string>
-    <string name="pixel_navbar_anim_summary">Requires a config change(display size, navbar position, reboot) themes may overwrite</string>
-
-    <!-- Toggle navigation bar -->
-    <string name="navigation_bar_enabled_title">Enable navigation bar</string>
-
     <!-- OmniJaws -->
     <string name="weather_title">Weather</string>
     <string name="weather_config_title">Service settings</string>
@@ -540,10 +532,6 @@
     <string name="recents_clear_all_location_bottom_right">Bottom right</string>
     <string name="recents_clear_all_location_bottom_left">Bottom left</string>
     <string name="recents_clear_all_location_bottom_center">Bottom center</string>
-
-    <!-- kill app long press back -->
-    <string name="kill_app_longpress_back">Kill app back button</string>
-    <string name="kill_app_longpress_back_summary">Kill the foreground app by long-pressing the back key</string>
 
     <!-- Hardware key rebinding -->
     <string name="button_pref_title">Hardware keys</string>
