@@ -23,7 +23,7 @@
 
     <Preference
         android:key="navbar"
-        android:fragment="com.gzr.wolvesden.fragments.Navbar"
+        android:fragment="com.gzr.wolvesden.fragments.NavbarSettings"
         android:title="@string/navbar_title" />
 
     <Preference
