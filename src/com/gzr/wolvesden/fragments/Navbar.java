@@ -37,35 +37,12 @@ import com.android.settings.Utils;
 public class Navbar extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
-    private static final String KILL_APP_LONGPRESS_BACK = "kill_app_longpress_back";
-
-    private SwitchPreference mNavbarToggle;
-
-    private SwitchPreference mKillAppLongPressBack;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         addPreferencesFromResource(R.xml.navbar);
-
-        ContentResolver resolver = getActivity().getContentResolver();
-  
-        mNavbarToggle = (SwitchPreference) findPreference("navigation_bar_enabled");
-        boolean enabled = Settings.Secure.getIntForUser(
-                resolver, Settings.Secure.NAVIGATION_BAR_ENABLED,
-                getActivity().getResources().getBoolean(
-                com.android.internal.R.bool.config_showNavigationBar) ? 1 : 0,
-                UserHandle.USER_CURRENT) == 1;
-        mNavbarToggle.setChecked(enabled);
-        mNavbarToggle.setOnPreferenceChangeListener(this);
-
-        // kill-app long press back
-        mKillAppLongPressBack = (SwitchPreference) findPreference(KILL_APP_LONGPRESS_BACK);
-        mKillAppLongPressBack.setOnPreferenceChangeListener(this);
-        int killAppLongPressBack = Settings.Secure.getInt(getContentResolver(),
-                KILL_APP_LONGPRESS_BACK, 0);
-        mKillAppLongPressBack.setChecked(killAppLongPressBack != 0);
     }
 
     @Override
@@ -78,21 +55,7 @@ public class Navbar extends SettingsPreferenceFragment implements
         super.onResume();
     }
 
-    public boolean onPreferenceChange(Preference preference, Object newValue) {
-        ContentResolver resolver = getActivity().getContentResolver();
-        if (preference == mNavbarToggle) {
-            boolean value = (Boolean) newValue;
-            Settings.Secure.putIntForUser(getActivity().getContentResolver(),
-                    Settings.Secure.NAVIGATION_BAR_ENABLED, value ? 1 : 0,
-                    UserHandle.USER_CURRENT);
-            mNavbarToggle.setChecked(value);
-            return true;
-        } else if (preference == mKillAppLongPressBack) {
-            boolean value = (Boolean) newValue;
-            Settings.Secure.putInt(getContentResolver(),
-		KILL_APP_LONGPRESS_BACK, value ? 1 : 0);
-            return true;
-        }
-        return false;
+    public boolean onPreferenceChange(Preference preference, Object objValue) {
+        return true;
     }
 }
