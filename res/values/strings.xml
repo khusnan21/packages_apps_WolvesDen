@@ -556,7 +556,7 @@
     <string name="navbar_mode">Navigation mode</string>
     <string name="navbar_mode_summary">Select which navigation mode to use on your device</string>
     <string name="navbar_visibility">Allow navigation bar</string>
-    <string name="navigationbar_settings_title">Navigation bar</string>
+    <string name="navigationbar_title">Navigation bar</string>
     <string name="bottom_nav_navigation_title">Navigation bar</string>
     <string name="navigationbar_settings_summary">Customize navigation style and behavior</string>
     <string name="navbar_general_title">Advanced</string>
