@@ -202,7 +202,19 @@
         <!-- Do not translate. -->
         <item>@string/night_mode_yes</item>
         <!-- Do not translate. -->
-        <item>@string/night_mode_auto</item>
+        <item>@string/night_mode_white</item>
+        <!-- Do not translate. -->
+        <item>@string/night_mode_red</item>
+        <!-- Do not translate. -->
+        <item>@string/night_mode_mint</item>
+        <!-- Do not translate. -->
+        <item>@string/night_mode_yellow</item>
+        <!-- Do not translate. -->
+        <item>@string/night_mode_gold</item>
+        <!-- Do not translate. -->
+        <item>@string/night_mode_blue</item>
+        <!-- Do not translate. -->
+        <item>@string/night_mode_pink</item>                
     </string-array>
 
     <!-- These values should match up with the MODE_NIGHT constants in UiModeManager.
@@ -213,7 +225,19 @@
         <!-- Do not translate. -->
         <item>2</item>
         <!-- Do not translate. -->
-        <item>0</item>
+        <item>3</item>
+        <!-- Do not translate. -->
+        <item>4</item>
+        <!-- Do not translate. -->
+        <item>5</item>
+        <!-- Do not translate. -->
+        <item>6</item>
+        <!-- Do not translate. -->
+        <item>7</item>
+        <!-- Do not translate. -->
+        <item>8</item>
+        <!-- Do not translate. -->
+        <item>9</item>        
     </string-array>
 
     <!-- Listview animation -->
