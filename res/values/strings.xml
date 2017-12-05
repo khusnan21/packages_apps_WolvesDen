@@ -403,7 +403,7 @@
     <!-- Sound & display settings screen, theme setting value to prefer a dark-colored user interface [CHAR LIMIT=30] -->
     <string name="night_mode_white">White</string>
     <!-- Sound & display settings screen, theme setting value to automatically switch between a light- or dark-colored user interface [CHAR LIMIT=30] -->
-    <string name="night_mode_red">Red</string>
+    <string name="night_mode_bdred">Red</string>
     <!-- Sound & display settings screen, theme setting value to automatically switch between a light- or dark-colored user interface [CHAR LIMIT=30] -->
     <string name="night_mode_mint">Bluegreen</string>
     <!-- Sound & display settings screen, theme setting value to automatically switch between a light- or dark-colored user interface [CHAR LIMIT=30] -->
