@@ -214,7 +214,7 @@
         <!-- Do not translate. -->
         <item>@string/night_mode_blue</item>
         <!-- Do not translate. -->
-        <item>@string/night_mode_pink</item>                
+        <item>@string/night_mode_pink</item>
     </string-array>
 
     <!-- These values should match up with the MODE_NIGHT constants in UiModeManager.
@@ -237,7 +237,7 @@
         <!-- Do not translate. -->
         <item>8</item>
         <!-- Do not translate. -->
-        <item>9</item>        
+        <item>9</item>
     </string-array>
 
     <!-- Listview animation -->
@@ -391,29 +391,6 @@
         <item>3</item>
         <item>4</item>
         <item>5</item>
-    </string-array>
-
-    <!-- Hardware key rebinding -->
-    <string-array name="hardware_keys_action_entries" translatable="false">
-        <item>@string/hardware_keys_action_nothing</item>
-        <item>@string/hardware_keys_action_menu</item>
-        <item>@string/hardware_keys_action_app_switch</item>
-        <item>@string/hardware_keys_action_search</item>
-        <item>@string/hardware_keys_action_voice_search</item>
-        <item>@string/hardware_keys_action_in_app_search</item>
-        <item>@string/hardware_keys_action_launch_camera</item>
-        <item>@string/hardware_keys_action_sleep</item>
-    </string-array>
-
-    <string-array name="hardware_keys_action_values" translatable="false">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-        <item>6</item>
-        <item>7</item>
     </string-array>
 
     <!-- DUI -->
