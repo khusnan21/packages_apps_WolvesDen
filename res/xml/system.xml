@@ -21,7 +21,7 @@
     android:layout="@layout/tab"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <Preference
+    <!--<Preference
         android:key="animations"
         android:fragment="com.gzr.wolvesden.fragments.Animations"
         android:title="@string/animations" />
@@ -63,6 +63,6 @@
     <Preference
         android:key="various_system"
         android:fragment="com.gzr.wolvesden.fragments.VariousSystem"
-        android:title="@string/various_system_title" />
+        android:title="@string/various_system_title" />-->
 
 </PreferenceScreen>

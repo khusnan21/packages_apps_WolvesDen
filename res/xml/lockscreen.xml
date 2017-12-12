@@ -21,7 +21,7 @@
     android:layout="@layout/tab"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <Preference
+    <!--<Preference
             android:title="@string/lockscreen_tuner_title" >
             <intent android:action="android.intent.action.MAIN"
                 android:targetPackage="com.android.systemui"
@@ -36,6 +36,6 @@
     <Preference
         android:key="various_lockscreen"
         android:title="@string/various_lockscreen_title"
-        android:fragment="com.gzr.wolvesden.fragments.VariousLockscreen" />
+        android:fragment="com.gzr.wolvesden.fragments.VariousLockscreen" />-->
 
 </PreferenceScreen>

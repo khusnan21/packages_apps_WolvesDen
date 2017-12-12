@@ -21,7 +21,7 @@
     android:layout="@layout/tab"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <Preference
+    <!--<Preference
         android:key="navbar"
         android:fragment="com.gzr.wolvesden.fragments.NavbarSettings"
         android:title="@string/navbar_title" />
@@ -34,6 +34,6 @@
     <Preference
         android:key="various_navigation"
         android:fragment="com.gzr.wolvesden.fragments.VariousNavigation"
-        android:title="@string/various_navigation_title" />
+        android:title="@string/various_navigation_title" />-->
 
 </PreferenceScreen>
