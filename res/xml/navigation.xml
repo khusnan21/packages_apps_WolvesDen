@@ -21,17 +21,17 @@
     android:layout="@layout/tab"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <!--<Preference
+   <Preference
         android:key="navbar"
-        android:fragment="com.gzr.wolvesden.fragments.NavbarSettings"
+        android:fragment="com.gzr.wolvesden.fragments.Navbar"
         android:title="@string/navbar_title" />
 
-    <Preference
+     <Preference
         android:key="button_settings"
         android:title="@string/button_pref_title"
-        android:fragment="com.gzr.wolvesden.fragments.ButtonSettings" />
+        android:fragment="com.gzr.wolvesden.fragments.Button" />
 
-    <Preference
+    <!--<Preference
         android:key="various_navigation"
         android:fragment="com.gzr.wolvesden.fragments.VariousNavigation"
         android:title="@string/various_navigation_title" />-->

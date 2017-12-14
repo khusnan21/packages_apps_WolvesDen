@@ -21,14 +21,14 @@
     android:layout="@layout/tab"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <!--<Preference
+    <Preference
             android:title="@string/lockscreen_tuner_title" >
             <intent android:action="android.intent.action.MAIN"
                 android:targetPackage="com.android.systemui"
                 android:targetClass="com.android.systemui.tuner.LockscreenActivity" />
     </Preference>
 
-    <Preference
+    <!--<Preference
             android:key="lockscreen_weather"
             android:title="@string/lockscreen_weather_title"
             android:fragment="com.gzr.wolvesden.fragments.LockScreenWeatherSettings" />-->
