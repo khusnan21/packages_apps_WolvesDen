@@ -19,7 +19,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <com.gzr.wolvesden.preference.SystemSettingSwitchPreference
+    <!--<com.gzr.wolvesden.preference.SystemSettingSwitchPreference
         android:key="double_tap_sleep_lockscreen"
         android:title="@string/double_tap_sleep_lockscreen"
         android:defaultValue="true" />
@@ -34,7 +34,7 @@
         android:key="lockscreen_power_menu_disabled"
         android:title="@string/lockscreen_power_menu_disabled_title"
         android:summary="@string/lockscreen_power_menu_disabled_summary"
-        android:defaultValue="true" />
+        android:defaultValue="true" />-->
 
     <com.gzr.wolvesden.preference.SystemSettingSwitchPreference
         android:key="lockscreen_battery_info"
