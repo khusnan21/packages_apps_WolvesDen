@@ -29,12 +29,12 @@
     <Preference
         android:key="network_traffic"
         android:title="@string/network_traffic_title"
-        android:fragment="com.gzr.wolvesden.fragments.NetworkTraffic" />
+        android:fragment="com.gzr.wolvesden.fragments.NetworkTraffic" />-->
 
     <Preference
         android:key="quicksettings"
         android:title="@string/quicksettings_title"
-        android:fragment="com.gzr.wolvesden.fragments.QuickSettings" />-->
+        android:fragment="com.gzr.wolvesden.fragments.QuickSettings" />
 
     <Preference
             android:title="@string/statusbar_items_title" >
