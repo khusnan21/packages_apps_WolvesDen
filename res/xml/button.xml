@@ -42,13 +42,13 @@
         android:summary="@string/volume_keys_control_media_stream_summary"
         android:defaultValue="false" />
 
-    <!--<com.gzr.wolvesden.preference.SystemSettingSwitchPreference
+    <com.gzr.wolvesden.preference.SystemSettingSwitchPreference
         android:key="volume_button_music_control"
         android:title="@string/volume_rocker_music_controls_title"
         android:summary="@string/volume_rocker_music_controls_summary"
         android:defaultValue="true" />
 
-    <com.gzr.wolvesden.preference.SystemSettingSwitchPreference
+    <!--<com.gzr.wolvesden.preference.SystemSettingSwitchPreference
         android:key="allow_incall_home"
         android:title="@string/allow_incall_home_title"
         android:summary="@string/allow_incall_home_summary"
