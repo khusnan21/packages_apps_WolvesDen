@@ -38,8 +38,8 @@ import com.android.settings.Utils;
 public class VariousStatusbar extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
-    /*private ListPreference mTickerMode;
-    private ListPreference mLogoStyle;
+    private ListPreference mTickerMode;
+    /*private ListPreference mLogoStyle;
     private ColorPickerPreference mStatusBarLogoColor;
     static final int DEFAULT_LOGO_COLOR = 0xff009688;*/
 
@@ -48,7 +48,7 @@ public class VariousStatusbar extends SettingsPreferenceFragment implements
         super.onCreate(savedInstanceState);
 
         addPreferencesFromResource(R.xml.various_statusbar);
-/*
+
         mTickerMode = (ListPreference) findPreference("ticker_mode");
         mTickerMode.setOnPreferenceChangeListener(this);
         int tickerMode = Settings.System.getIntForUser(getContentResolver(),
@@ -56,7 +56,7 @@ public class VariousStatusbar extends SettingsPreferenceFragment implements
                 1, UserHandle.USER_CURRENT);
         mTickerMode.setValue(String.valueOf(tickerMode));
         mTickerMode.setSummary(mTickerMode.getEntry());
-
+/*
         mLogoStyle = (ListPreference) findPreference("status_bar_logo_style");
         mLogoStyle.setOnPreferenceChangeListener(this);
         int logoStyle = Settings.System.getIntForUser(getContentResolver(),
@@ -85,7 +85,7 @@ public class VariousStatusbar extends SettingsPreferenceFragment implements
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-/*        ContentResolver resolver = getActivity().getContentResolver();
+        ContentResolver resolver = getActivity().getContentResolver();
         if (preference.equals(mTickerMode)) {
             int tickerMode = Integer.parseInt(((String) newValue).toString());
             Settings.System.putIntForUser(getContentResolver(),
@@ -93,8 +93,8 @@ public class VariousStatusbar extends SettingsPreferenceFragment implements
             int index = mTickerMode.findIndexOfValue((String) newValue);
             mTickerMode.setSummary(
                     mTickerMode.getEntries()[index]);
-            return true;
-        } else if (preference.equals(mLogoStyle)) {
+            return true;/* 
+       } else if (preference.equals(mLogoStyle)) {
             int logoStyle = Integer.parseInt(((String) newValue).toString());
             Settings.System.putIntForUser(getContentResolver(),
                     Settings.System.STATUS_BAR_LOGO_STYLE, logoStyle, UserHandle.USER_CURRENT);
@@ -108,10 +108,10 @@ public class VariousStatusbar extends SettingsPreferenceFragment implements
             preference.setSummary(hex);
             int intHex = ColorPickerPreference.convertToColorInt(hex);
             Settings.System.putInt(resolver,
-                    Settings.System.STATUS_BAR_LOGO_COLOR, intHex);*/
-            return true;
+                    Settings.System.STATUS_BAR_LOGO_COLOR, intHex);
+            return true;*/
         }
-        /*return false;*/
+        return false;
     }
 }
 
