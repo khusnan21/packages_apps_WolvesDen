@@ -45,12 +45,12 @@
         settings:min="1"
         settings:units="" />
 
-    <com.gzr.wolvesden.preference.CustomSeekBarPreference
+    <!--<com.gzr.wolvesden.preference.CustomSeekBarPreference
         android:key="sysui_qqs_count_key"
         android:title="@string/qs_small_tiles_title"
         android:max="8"
         settings:min="3"
         settings:units=""
-        android:persistent="false" />
+        android:persistent="false" />-->
 
 </PreferenceScreen>
