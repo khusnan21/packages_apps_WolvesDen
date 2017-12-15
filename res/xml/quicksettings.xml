@@ -35,11 +35,11 @@
         android:summary="@string/status_bar_quick_qs_pulldown_summary"
         android:defaultValue="true" />
 
-    <!--<com.gzr.wolvesden.preference.SystemSettingSwitchPreference
+    <com.gzr.wolvesden.preference.SystemSettingSwitchPreference
         android:key="qs_footer_warnings"
         android:title="@string/qs_footer_warnings_title"
         android:summary="@string/qs_footer_warnings_summary"
-        android:defaultValue="true" />-->
+        android:defaultValue="true" />
 
     <com.gzr.wolvesden.preference.SystemSettingSwitchPreference
         android:key="qs_show_brightness_icon"
