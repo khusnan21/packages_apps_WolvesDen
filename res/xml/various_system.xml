@@ -19,10 +19,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <Preference
+    <!--<Preference
             android:key="batterybar"
             android:fragment="com.gzr.wolvesden.fragments.BatteryBarSettings"
-            android:title="@string/batterybar_title"/>
+            android:title="@string/batterybar_title"/>-->
 
     <com.gzr.wolvesden.preference.SystemSettingSwitchPreference
         android:key="wake_when_plugged_or_unplugged"
@@ -30,10 +30,10 @@
         android:summary="@string/wake_when_plugged_or_unplugged_summary"
         android:defaultValue="false" />
 
-    <com.gzr.wolvesden.preference.SystemSettingSwitchPreference
+    <!--<com.gzr.wolvesden.preference.SystemSettingSwitchPreference
         android:key="vibration_on_charge_state_changed"
         android:title="@string/vibration_on_charge_state_changed_title"
         android:summary="@string/vibration_on_charge_state_changed_summary"
-        android:defaultValue="true" />
+        android:defaultValue="true" />-->
 
 </PreferenceScreen>
