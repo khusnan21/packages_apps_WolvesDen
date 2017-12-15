@@ -29,10 +29,10 @@
         android:title="@string/headset_title"
         android:fragment="com.gzr.wolvesden.fragments.Headset" />
 
-    <!--<Preference
+    <Preference
         android:key="recent_settings"
         android:title="@string/recent_settings_title"
-        android:fragment="com.gzr.wolvesden.fragments.RecentsSettings" />-->
+        android:fragment="com.gzr.wolvesden.fragments.RecentsSettings" />
 
 </PreferenceScreen>
 
