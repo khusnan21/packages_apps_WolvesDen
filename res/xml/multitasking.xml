@@ -22,14 +22,14 @@
     <!--<Preference
        android:key="gesture_anywhere"
        android:fragment="com.gzr.wolvesden.gestureanywhere.GestureAnywhereSettings"
-       android:title="@string/gesture_anywhere_title" />
+       android:title="@string/gesture_anywhere_title" />-->
 
     <Preference
         android:key="headset"
         android:title="@string/headset_title"
         android:fragment="com.gzr.wolvesden.fragments.Headset" />
 
-    <Preference
+    <!--<Preference
         android:key="recent_settings"
         android:title="@string/recent_settings_title"
         android:fragment="com.gzr.wolvesden.fragments.RecentsSettings" />-->
