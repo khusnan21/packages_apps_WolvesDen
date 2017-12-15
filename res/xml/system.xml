@@ -40,12 +40,12 @@
         android:fragment="com.gzr.wolvesden.fragments.LedSettings"
         android:title="@string/leds_title" />
 
-    <!--<Preference
+    <Preference
         android:key="notifications"
         android:fragment="com.gzr.wolvesden.fragments.Notifications"
         android:title="@string/notifications_title" />
 
-    <Preference
+    <!--<Preference
         android:key="powermenu"
         android:fragment="com.gzr.wolvesden.fragments.PowerMenu"
         android:title="@string/powermenu_title" />
