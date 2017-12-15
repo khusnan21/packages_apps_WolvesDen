@@ -33,14 +33,14 @@
     <Preference
         android:key="button"
         android:title="@string/button_title"
-        android:fragment="com.gzr.wolvesden.fragments.Button" />
+        android:fragment="com.gzr.wolvesden.fragments.Button" />-->
 
     <Preference
         android:key="leds"
         android:fragment="com.gzr.wolvesden.fragments.LedSettings"
         android:title="@string/leds_title" />
 
-    <Preference
+    <!--<Preference
         android:key="notifications"
         android:fragment="com.gzr.wolvesden.fragments.Notifications"
         android:title="@string/notifications_title" />
