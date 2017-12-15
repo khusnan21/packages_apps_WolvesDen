@@ -59,8 +59,8 @@ import java.util.List;
 public class RecentsSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, DialogInterface.OnDismissListener {
 
-    private static final String IMMERSIVE_RECENTS = "immersive_recents";
-    private static final String RECENTS_CLEAR_ALL_LOCATION = "recents_clear_all_location";
+    /*private static final String IMMERSIVE_RECENTS = "immersive_recents";
+    private static final String RECENTS_CLEAR_ALL_LOCATION = "recents_clear_all_location";*/
 
     private final static String[] sSupportedActions = new String[] {
         "org.adw.launcher.THEMES",
@@ -81,8 +81,8 @@ public class RecentsSettings extends SettingsPreferenceFragment implements
 
     private ListPreference mImmersiveRecents;
 
-    private ListPreference mRecentsClearAllLocation;
-    private SwitchPreference mRecentsClearAll;
+    /*private ListPreference mRecentsClearAllLocation;
+    private SwitchPreference mRecentsClearAll;*/
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -99,7 +99,7 @@ public class RecentsSettings extends SettingsPreferenceFragment implements
         mStockIconPacks.setEnabled(!enabled);
         mSlimToggle.setOnPreferenceChangeListener(this);
 
-        mImmersiveRecents = (ListPreference) findPreference(IMMERSIVE_RECENTS);
+        /*mImmersiveRecents = (ListPreference) findPreference(IMMERSIVE_RECENTS);
         mImmersiveRecents.setValue(String.valueOf(Settings.System.getInt(
                 resolver, Settings.System.IMMERSIVE_RECENTS, 0)));
         mImmersiveRecents.setSummary(mImmersiveRecents.getEntry());
@@ -110,7 +110,7 @@ public class RecentsSettings extends SettingsPreferenceFragment implements
                 Settings.System.RECENTS_CLEAR_ALL_LOCATION, 3, UserHandle.USER_CURRENT);
         mRecentsClearAllLocation.setValue(String.valueOf(location));
         mRecentsClearAllLocation.setSummary(mRecentsClearAllLocation.getEntry());
-        mRecentsClearAllLocation.setOnPreferenceChangeListener(this);
+        mRecentsClearAllLocation.setOnPreferenceChangeListener(this);*/
 
     }
 
@@ -129,7 +129,7 @@ public class RecentsSettings extends SettingsPreferenceFragment implements
             mSlimToggle.setChecked(value);
             mStockIconPacks.setEnabled(!value);
             return true;
-        } else if (preference == mImmersiveRecents) {
+        /*} else if (preference == mImmersiveRecents) {
             Settings.System.putInt(getContentResolver(), Settings.System.IMMERSIVE_RECENTS,
                     Integer.valueOf((String) newValue));
             mImmersiveRecents.setValue(String.valueOf(newValue));
@@ -141,7 +141,7 @@ public class RecentsSettings extends SettingsPreferenceFragment implements
             Settings.System.putIntForUser(getActivity().getContentResolver(),
                     Settings.System.RECENTS_CLEAR_ALL_LOCATION, location, UserHandle.USER_CURRENT);
             mRecentsClearAllLocation.setSummary(mRecentsClearAllLocation.getEntries()[index]);
-            return true;
+            return true;*/
         }
         return false;
     }
