@@ -43,9 +43,9 @@
                 android:targetClass="com.android.systemui.tuner.StatusbarItemsActivity" />
     </Preference>
 
-    <!--<Preference
+    <Preference
         android:key="various_statusbar"
         android:title="@string/various_statusbar_title"
-        android:fragment="com.gzr.wolvesden.fragments.VariousStatusbar" />-->
+        android:fragment="com.gzr.wolvesden.fragments.VariousStatusbar" />
 
 </PreferenceScreen>
