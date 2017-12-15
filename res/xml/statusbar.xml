@@ -24,12 +24,12 @@
     <!--<Preference
         android:key="status_bar_battery_style"
         android:title="@string/battery_title"
-        android:fragment="com.gzr.wolvesden.fragments.StatusbarBatteryStyle" />
+        android:fragment="com.gzr.wolvesden.fragments.StatusbarBatteryStyle" />-->
 
     <Preference
         android:key="network_traffic"
         android:title="@string/network_traffic_title"
-        android:fragment="com.gzr.wolvesden.fragments.NetworkTraffic" />-->
+        android:fragment="com.gzr.wolvesden.fragments.NetworkTraffic" />
 
     <Preference
         android:key="quicksettings"
