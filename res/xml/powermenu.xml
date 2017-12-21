@@ -34,7 +34,7 @@
         android:title="@string/powermenu_restart_recovery"
         android:defaultValue="true" />
 
-    <com.gzr.wolvesden.preference.SystemSettingSwitchPreference
+    <!--<com.gzr.wolvesden.preference.SystemSettingSwitchPreference
         android:key="powermenu_screenshot"
         android:title="@string/powermenu_screenshot"
         android:defaultValue="false" />
@@ -42,7 +42,7 @@
     <com.gzr.wolvesden.preference.SystemSettingSwitchPreference
         android:key="powermenu_screenrecord"
         android:title="@string/powermenu_screenrecord"
-        android:defaultValue="false" />
+        android:defaultValue="false" />-->
 
     <com.gzr.wolvesden.preference.SystemSettingSwitchPreference
         android:key="powermenu_airplane"
@@ -59,7 +59,7 @@
         android:title="@string/powermenu_lockdown"
         android:defaultValue="false" />
 
-    <com.gzr.wolvesden.preference.SystemSettingSwitchPreference
+    <!--<com.gzr.wolvesden.preference.SystemSettingSwitchPreference
         android:key="powermenu_soundpanel"
         android:title="@string/powermenu_soundpanel"
         android:defaultValue="false" />
@@ -67,5 +67,5 @@
     <com.gzr.wolvesden.preference.SystemSettingSwitchPreference
         android:key="powermenu_users"
         android:title="@string/powermenu_users"
-        android:defaultValue="false" />
+        android:defaultValue="false" />-->
 </PreferenceScreen>
