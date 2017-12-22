@@ -39,9 +39,9 @@ public class VariousStatusbar extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
     private ListPreference mTickerMode;
-    /*private ListPreference mLogoStyle;
+    private ListPreference mLogoStyle;
     private ColorPickerPreference mStatusBarLogoColor;
-    static final int DEFAULT_LOGO_COLOR = 0xff009688;*/
+    static final int DEFAULT_LOGO_COLOR = 0xff009688;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -56,7 +56,6 @@ public class VariousStatusbar extends SettingsPreferenceFragment implements
                 1, UserHandle.USER_CURRENT);
         mTickerMode.setValue(String.valueOf(tickerMode));
         mTickerMode.setSummary(mTickerMode.getEntry());
-/*
         mLogoStyle = (ListPreference) findPreference("status_bar_logo_style");
         mLogoStyle.setOnPreferenceChangeListener(this);
         int logoStyle = Settings.System.getIntForUser(getContentResolver(),
@@ -71,7 +70,7 @@ public class VariousStatusbar extends SettingsPreferenceFragment implements
                 Settings.System.STATUS_BAR_LOGO_COLOR, DEFAULT_LOGO_COLOR);
         String hexColor = String.format("#%08x", (DEFAULT_LOGO_COLOR & intColor));
         mStatusBarLogoColor.setSummary(hexColor);
-        mStatusBarLogoColor.setNewPreviewColor(intColor);*/
+        mStatusBarLogoColor.setNewPreviewColor(intColor);
     }
 
     @Override
@@ -93,7 +92,7 @@ public class VariousStatusbar extends SettingsPreferenceFragment implements
             int index = mTickerMode.findIndexOfValue((String) newValue);
             mTickerMode.setSummary(
                     mTickerMode.getEntries()[index]);
-            return true;/* 
+            return true;
        } else if (preference.equals(mLogoStyle)) {
             int logoStyle = Integer.parseInt(((String) newValue).toString());
             Settings.System.putIntForUser(getContentResolver(),
@@ -109,7 +108,7 @@ public class VariousStatusbar extends SettingsPreferenceFragment implements
             int intHex = ColorPickerPreference.convertToColorInt(hex);
             Settings.System.putInt(resolver,
                     Settings.System.STATUS_BAR_LOGO_COLOR, intHex);
-            return true;*/
+            return true;
         }
         return false;
     }
