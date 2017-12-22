@@ -21,12 +21,12 @@
     android:layout="@layout/tab"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <!--<Preference
+    <Preference
         android:key="animations"
         android:fragment="com.gzr.wolvesden.fragments.Animations"
         android:title="@string/animations" />
  
-    <Preference
+    <!--<Preference
         android:title="@string/app_ops_settings"
         android:fragment="com.android.settings.applications.AppOpsSummary"/>
 
