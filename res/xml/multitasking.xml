@@ -19,10 +19,10 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/multitasking_category" >
 
-    <!--<Preference
+    <Preference
        android:key="gesture_anywhere"
        android:fragment="com.gzr.wolvesden.gestureanywhere.GestureAnywhereSettings"
-       android:title="@string/gesture_anywhere_title" />-->
+       android:title="@string/gesture_anywhere_title" />
 
     <Preference
         android:key="headset"
