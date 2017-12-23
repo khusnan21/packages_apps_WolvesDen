@@ -35,7 +35,7 @@ public class QsRowsColumns extends SettingsPreferenceFragment implements
     private CustomSeekBarPreference mQsRowsLand;
     private CustomSeekBarPreference mQsColumnsPort;
     private CustomSeekBarPreference mQsColumnsLand;
-    /*private CustomSeekBarPreference mSysuiQqsCount;*/
+    private CustomSeekBarPreference mSysuiQqsCount;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -67,10 +67,10 @@ public class QsRowsColumns extends SettingsPreferenceFragment implements
         mQsColumnsLand.setValue(value);
         mQsColumnsLand.setOnPreferenceChangeListener(this);
 
-        /*value = Settings.Secure.getInt(resolver, Settings.Secure.QQS_COUNT, 6);
+        value = Settings.Secure.getInt(resolver, Settings.Secure.QQS_COUNT, 6);
         mSysuiQqsCount = (CustomSeekBarPreference) findPreference("sysui_qqs_count_key");
         mSysuiQqsCount.setValue(value);
-        mSysuiQqsCount.setOnPreferenceChangeListener(this);*/
+        mSysuiQqsCount.setOnPreferenceChangeListener(this);
 
     }
 
@@ -101,11 +101,11 @@ public class QsRowsColumns extends SettingsPreferenceFragment implements
             Settings.System.putIntForUser(getContentResolver(),
                     Settings.System.QS_COLUMNS_LANDSCAPE, val, UserHandle.USER_CURRENT);
             return true;
-        /*} else if (preference == mSysuiQqsCount) {
+        } else if (preference == mSysuiQqsCount) {
             int SysuiQqsCount = (Integer) newValue;
             Settings.Secure.putInt(getContentResolver(),
                     Settings.Secure.QQS_COUNT, SysuiQqsCount * 1);
-            return true;*/
+            return true;
         }
         return false;
     }
