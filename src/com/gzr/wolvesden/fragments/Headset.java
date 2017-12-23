@@ -57,13 +57,13 @@ public class Headset extends SettingsPreferenceFragment implements
         mLaunchPlayerHeadsetConnection.setValue(Integer.toString(mLaunchPlayerHeadsetConnectionValue));
         mLaunchPlayerHeadsetConnection.setSummary(mLaunchPlayerHeadsetConnection.getEntry());
         mLaunchPlayerHeadsetConnection.setOnPreferenceChangeListener(this);
-/*
+
         mHeadsetRingtoneFocus = (ListPreference) findPreference(RINGTONE_FOCUS_MODE);
         int mHeadsetRingtoneFocusValue = Settings.Global.getInt(resolver,
                 Settings.Global.RINGTONE_FOCUS_MODE, 0);
         mHeadsetRingtoneFocus.setValue(Integer.toString(mHeadsetRingtoneFocusValue));
         mHeadsetRingtoneFocus.setSummary(mHeadsetRingtoneFocus.getEntry());
-        mHeadsetRingtoneFocus.setOnPreferenceChangeListener(this);*/
+        mHeadsetRingtoneFocus.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -86,7 +86,7 @@ public class Headset extends SettingsPreferenceFragment implements
             Settings.System.putIntForUser(resolver, Settings.System.HEADSET_CONNECT_PLAYER,
                     mLaunchPlayerHeadsetConnectionValue, UserHandle.USER_CURRENT);
             return true;
-        }/* else if (preference == mHeadsetRingtoneFocus) {
+        } else if (preference == mHeadsetRingtoneFocus) {
             int mHeadsetRingtoneFocusValue = Integer.valueOf((String) newValue);
             int index = mHeadsetRingtoneFocus.findIndexOfValue((String) newValue);
             mHeadsetRingtoneFocus.setSummary(
@@ -94,7 +94,7 @@ public class Headset extends SettingsPreferenceFragment implements
             Settings.Global.putInt(resolver, Settings.Global.RINGTONE_FOCUS_MODE,
                     mHeadsetRingtoneFocusValue);
             return true;
-        }*/
+        }
         return false;
     }
 }
