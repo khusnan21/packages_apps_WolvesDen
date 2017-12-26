@@ -41,10 +41,10 @@
         android:summary="@string/qs_footer_warnings_summary"
         android:defaultValue="true" />
 
-    <!--<com.gzr.wolvesden.preference.SystemSettingSwitchPreference
+    <com.gzr.wolvesden.preference.SystemSettingSwitchPreference
         android:key="qs_show_brightness_icon"
         android:title="@string/brightness_icon_title"
         android:summary="@string/brightness_icon_summary"
-        android:defaultValue="false"/>-->
+        android:defaultValue="false"/>
 
 </PreferenceScreen>
