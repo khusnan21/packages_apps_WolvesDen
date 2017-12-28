@@ -24,6 +24,13 @@
             android:fragment="com.gzr.wolvesden.fragments.BatteryBarSettings"
             android:title="@string/batterybar_title"/>
 
+    <ListPreference
+        android:key="systemui_theme_style"
+        android:title="@string/systemui_theme_style_title"
+        android:persistent="false"
+        android:entries="@array/systemui_theme_style_entries"
+        android:entryValues="@array/systemui_theme_style_values" />
+
     <com.gzr.wolvesden.preference.SystemSettingSwitchPreference
         android:key="wake_when_plugged_or_unplugged"
         android:title="@string/wake_when_plugged_or_unplugged_title"
