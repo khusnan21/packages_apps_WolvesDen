@@ -37,10 +37,10 @@
         android:summary="@string/less_boring_heads_up_summary"
         android:defaultValue="true" />
 
-    <!--<com.gzr.wolvesden.preference.SystemSettingSwitchPreference
+    <com.gzr.wolvesden.preference.SystemSettingSwitchPreference
         android:key="toast_icon"
         android:title="@string/toast_icon_title"
         android:summary="@string/toast_icon_summary"
-        android:defaultValue="false" />-->
+        android:defaultValue="false" />
 
 </PreferenceScreen>
