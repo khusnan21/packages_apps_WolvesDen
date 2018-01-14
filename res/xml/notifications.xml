@@ -43,10 +43,11 @@
         android:summary="@string/toast_icon_summary"
         android:defaultValue="false" />
 
-    <com.gzr.wolvesden.preference.SystemSettingSwitchPreference
+    <ListPreference
         android:key="notification_sound_vib_screen_on"
         android:title="@string/notification_sound_vib_screen_on_title"
-        android:summary="@string/notification_sound_vib_screen_on_summary"
-        android:defaultValue="true" />
+        android:entries="@array/notification_sound_vib_screen_on_entries"
+        android:entryValues="@array/notification_sound_vib_screen_on_values"
+        android:summary="%s" />
 
 </PreferenceScreen>

@@ -56,6 +56,7 @@ public class VariousStatusbar extends SettingsPreferenceFragment implements
                 1, UserHandle.USER_CURRENT);
         mTickerMode.setValue(String.valueOf(tickerMode));
         mTickerMode.setSummary(mTickerMode.getEntry());
+
         mLogoStyle = (ListPreference) findPreference("status_bar_logo_style");
         mLogoStyle.setOnPreferenceChangeListener(this);
         int logoStyle = Settings.System.getIntForUser(getContentResolver(),
@@ -93,7 +94,7 @@ public class VariousStatusbar extends SettingsPreferenceFragment implements
             mTickerMode.setSummary(
                     mTickerMode.getEntries()[index]);
             return true;
-       } else if (preference.equals(mLogoStyle)) {
+        } else if (preference.equals(mLogoStyle)) {
             int logoStyle = Integer.parseInt(((String) newValue).toString());
             Settings.System.putIntForUser(getContentResolver(),
                     Settings.System.STATUS_BAR_LOGO_STYLE, logoStyle, UserHandle.USER_CURRENT);
