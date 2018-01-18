@@ -46,6 +46,7 @@
     <string name="various_lockscreen_title">Various</string>
     <string name="various_statusbar_title">Various</string>
     <string name="various_navigation_title">Various</string>
+    <string name="various_multitasking_title">Various</string>
     <string name="recent_settings_title">Recents</string>
     <string name="status_bar_clock_title">Clock options</string>
 
@@ -807,4 +808,7 @@
     <string name="clock_date_style_uppercase">Uppercase</string>
     <string name="clock_date_format_custom">Custom java format</string>
     <string name="menu_cancel">Cancel</string>
+
+    <string name="force_ambient_for_media_title">Show Ambient on new track</string>
+    <string name="force_ambient_for_media_summary">Show an Ambient Display notification when a new track is being played</string>
 </resources>

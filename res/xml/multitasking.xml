@@ -34,5 +34,10 @@
         android:title="@string/recent_settings_title"
         android:fragment="com.gzr.wolvesden.fragments.RecentsSettings" />
 
+    <Preference
+        android:key="multitasking"
+        android:fragment="com.gzr.wolvesden.fragments.VariousMultiTasking"
+        android:title="@string/various_multitasking_title" />
+
 </PreferenceScreen>
 
