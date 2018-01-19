@@ -37,11 +37,24 @@ import com.android.settings.Utils;
 public class VariousMultiTasking extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
+    private static final String FORCE_AMBIENT_FOR_MEDIA = "force_ambient_for_media";
+
+    private ListPreference mAmbientTicker;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         addPreferencesFromResource(R.xml.various_multitasking);
+        ContentResolver resolver = getActivity().getContentResolver();
+
+        mAmbientTicker = (ListPreference) findPreference(FORCE_AMBIENT_FOR_MEDIA);
+        int mode = Settings.System.getIntForUser(resolver,
+                Settings.System.FORCE_AMBIENT_FOR_MEDIA, 0, UserHandle.USER_CURRENT);
+        mAmbientTicker.setValue(Integer.toString(mode));
+        mAmbientTicker.setSummary(mAmbientTicker.getEntry());
+        mAmbientTicker.setOnPreferenceChangeListener(this);
+
     }
 
     @Override
@@ -49,14 +62,17 @@ public class VariousMultiTasking extends SettingsPreferenceFragment implements
         return MetricsProto.MetricsEvent.VALIDUS;
     }
 
-    @Override
-    public void onResume() {
-        super.onResume();
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        ContentResolver resolver = getActivity().getContentResolver();
+        if (preference == mAmbientTicker) {
+            int mode = Integer.valueOf((String) newValue);
+            int index = mAmbientTicker.findIndexOfValue((String) newValue);
+            mAmbientTicker.setSummary(
+                    mAmbientTicker.getEntries()[index]);
+            Settings.System.putIntForUser(resolver, Settings.System.FORCE_AMBIENT_FOR_MEDIA,
+                    mode, UserHandle.USER_CURRENT);
+            return true;
+        }
+        return false;
     }
-
-    public boolean onPreferenceChange(Preference preference, Object objValue) {
-        return true;
-    }
-
 }
-
