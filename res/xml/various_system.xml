@@ -36,6 +36,11 @@
         android:summary="@string/wakelock_blocker_summary"
         android:fragment="com.gzr.wolvesden.fragments.WakeLockBlocker"/>
 
+    <Preference
+        android:key="smartpixel"
+        android:fragment="com.gzr.wolvesden.fragments.SmartPixels"
+        android:title="@string/smartpixels_title"/>
+
     <ListPreference
         android:key="screen_off_animation"
         android:title="@string/screen_off_animation_title"
