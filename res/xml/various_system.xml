@@ -20,9 +20,9 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
     <Preference
-            android:key="batterybar"
-            android:fragment="com.gzr.wolvesden.fragments.BatteryBarSettings"
-            android:title="@string/batterybar_title"/>
+        android:key="batterybar"
+        android:fragment="com.gzr.wolvesden.fragments.BatteryBarSettings"
+        android:title="@string/batterybar_title"/>
 
     <Preference
         android:key="alarm_blocker"
@@ -35,6 +35,12 @@
         android:title="@string/wakelock_blocker_title"
         android:summary="@string/wakelock_blocker_summary"
         android:fragment="com.gzr.wolvesden.fragments.WakeLockBlocker"/>
+
+    <ListPreference
+        android:key="screen_off_animation"
+        android:title="@string/screen_off_animation_title"
+        android:entries="@array/screen_off_animation_entries"
+        android:entryValues="@array/screen_off_animation_values" />
 
     <ListPreference
         android:key="systemui_theme_style"

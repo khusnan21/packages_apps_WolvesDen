@@ -38,8 +38,10 @@ public class VariousSystem extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
     private static final String SYSTEMUI_THEME_STYLE = "systemui_theme_style";
+    private static final String SCREEN_OFF_ANIMATION = "screen_off_animation";
 
     private ListPreference mSystemUIThemeStyle;
+    private ListPreference mScreenOffAnimation;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -57,6 +59,13 @@ public class VariousSystem extends SettingsPreferenceFragment implements
         mSystemUIThemeStyle.setSummary(mSystemUIThemeStyle.getEntry());
         mSystemUIThemeStyle.setOnPreferenceChangeListener(this);
 
+
+        mScreenOffAnimation = (ListPreference) findPreference(SCREEN_OFF_ANIMATION);
+        int screenOffStyle = Settings.System.getInt(resolver,
+                Settings.System.SCREEN_OFF_ANIMATION, 0);
+        mScreenOffAnimation.setValue(String.valueOf(screenOffStyle));
+        mScreenOffAnimation.setSummary(mScreenOffAnimation.getEntry());
+        mScreenOffAnimation.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -78,6 +87,13 @@ public class VariousSystem extends SettingsPreferenceFragment implements
                     Settings.System.SYSTEM_UI_THEME, Integer.valueOf(value));
             int valueIndex = mSystemUIThemeStyle.findIndexOfValue(value);
             mSystemUIThemeStyle.setSummary(mSystemUIThemeStyle.getEntries()[valueIndex]);
+            return true;
+        } else if (preference == mScreenOffAnimation) {
+            String value = (String) newValue;
+            Settings.System.putInt(resolver,
+                    Settings.System.SCREEN_OFF_ANIMATION, Integer.valueOf(value));
+            int valueIndex = mScreenOffAnimation.findIndexOfValue(value);
+            mScreenOffAnimation.setSummary(mScreenOffAnimation.getEntries()[valueIndex]);
             return true;
         }
         return false;
