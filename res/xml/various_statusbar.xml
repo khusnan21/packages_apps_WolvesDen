@@ -56,4 +56,9 @@
         android:fragment="com.gzr.wolvesden.fragments.StatusBarClockSettings"
         android:title="@string/status_bar_clock_title" />
 
+    <Preference
+        android:key="statusbar_battery"
+        android:fragment="com.gzr.wolvesden.fragments.StatusBarBatterySettings"
+        android:title="@string/statusbar_battery_title" />
+
 </PreferenceScreen>
