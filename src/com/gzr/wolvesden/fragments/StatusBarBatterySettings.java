@@ -22,6 +22,7 @@ import android.os.Bundle;
 import android.os.UserHandle;
 import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
+import android.support.v14.preference.SwitchPreference;
 import android.provider.Settings;
 
 import com.gzr.wolvesden.preference.CustomSeekBarPreference;
@@ -36,6 +37,7 @@ public class StatusBarBatterySettings extends SettingsPreferenceFragment impleme
     private static final String BATTERY_STYLE = "battery_style";
 
     private ListPreference mBatteryIconStyle;
+    private SwitchPreference mBatteryPercentage;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -43,10 +45,19 @@ public class StatusBarBatterySettings extends SettingsPreferenceFragment impleme
         addPreferencesFromResource(R.xml.statusbar_battery_settings);
         final ContentResolver resolver = getActivity().getContentResolver();
 
+        int batteryStyle = Settings.Secure.getInt(resolver,
+                Settings.Secure.STATUS_BAR_BATTERY_STYLE, 0);
         mBatteryIconStyle = (ListPreference) findPreference(BATTERY_STYLE);
-        mBatteryIconStyle.setValue(Integer.toString(Settings.Secure.getInt(resolver,
-                Settings.Secure.STATUS_BAR_BATTERY_STYLE, 0)));
+        mBatteryIconStyle.setValue(Integer.toString(batteryStyle));
         mBatteryIconStyle.setOnPreferenceChangeListener(this);
+
+        boolean show = Settings.System.getInt(resolver,
+                Settings.System.SHOW_BATTERY_PERCENT, 1) == 1;
+        mBatteryPercentage = (SwitchPreference) findPreference("show_battery_percent");
+        mBatteryPercentage.setChecked(show);
+        mBatteryPercentage.setOnPreferenceChangeListener(this);
+        boolean hideForcePercentage = batteryStyle == 6 || batteryStyle == 7; /*text or hidden style*/
+        mBatteryPercentage.setEnabled(!hideForcePercentage);
     }
 
     @Override
@@ -59,6 +70,14 @@ public class StatusBarBatterySettings extends SettingsPreferenceFragment impleme
             int value = Integer.valueOf((String) newValue);
             Settings.Secure.putInt(getContentResolver(),
                     Settings.Secure.STATUS_BAR_BATTERY_STYLE, value);
+            boolean hideForcePercentage = value == 6 || value == 7;/*text or hidden style*/
+            mBatteryPercentage.setEnabled(!hideForcePercentage);
+            return true;
+        } else  if (preference == mBatteryPercentage) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.SHOW_BATTERY_PERCENT, value ? 1 : 0);
+            mBatteryPercentage.setChecked(value);
             return true;
         }
         return false;
