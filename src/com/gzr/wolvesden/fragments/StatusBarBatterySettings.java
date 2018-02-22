@@ -56,7 +56,7 @@ public class StatusBarBatterySettings extends SettingsPreferenceFragment impleme
         mBatteryPercentage = (SwitchPreference) findPreference("show_battery_percent");
         mBatteryPercentage.setChecked(show);
         mBatteryPercentage.setOnPreferenceChangeListener(this);
-        boolean hideForcePercentage = batteryStyle == 6 || batteryStyle == 7; /*text or hidden style*/
+        boolean hideForcePercentage = batteryStyle == 7 || batteryStyle == 8; /*text or hidden style*/
         mBatteryPercentage.setEnabled(!hideForcePercentage);
     }
 
@@ -70,7 +70,7 @@ public class StatusBarBatterySettings extends SettingsPreferenceFragment impleme
             int value = Integer.valueOf((String) newValue);
             Settings.Secure.putInt(getContentResolver(),
                     Settings.Secure.STATUS_BAR_BATTERY_STYLE, value);
-            boolean hideForcePercentage = value == 6 || value == 7;/*text or hidden style*/
+            boolean hideForcePercentage = value == 7 || value == 8;/*text or hidden style*/
             mBatteryPercentage.setEnabled(!hideForcePercentage);
             return true;
         } else  if (preference == mBatteryPercentage) {
