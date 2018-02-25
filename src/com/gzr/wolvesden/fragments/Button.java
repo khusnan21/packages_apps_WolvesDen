@@ -36,12 +36,36 @@ import com.android.settings.Utils;
 
 public class Button extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
+    
+    public static final int KEY_MASK_HOME = 0x01;
 
+    private static final String HOME_BUTTON_WAKE = "home_button_wake";
+    
+    private SwitchPreference mHomeButtonWake;
+    
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         addPreferencesFromResource(R.xml.button);
+        
+        final PreferenceScreen prefScreen = getPreferenceScreen();
+        ContentResolver resolver = getContentResolver();
+
+        Resources res = getResources();
+        mHomeButtonWake = (SwitchPreference) findPreference(HOME_BUTTON_WAKE);
+
+        // bits for hardware keys present on device
+        final int deviceKeys = getResources().getInteger(
+                com.android.internal.R.integer.config_deviceHardwareKeys);
+
+        // read bits for present hardware keys
+        final boolean hasHomeKey = (deviceKeys & KEY_MASK_HOME) != 0;
+
+        boolean showHomeWake = res.getBoolean(R.bool.config_show_homeWake);
+        if (!hasHomeKey || !showHomeWake) {
+            prefScreen.removePreference(mHomeButtonWake);
+        }
     }
 
     @Override
