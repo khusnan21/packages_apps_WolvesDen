@@ -874,4 +874,7 @@
     <string name="heads_up_summary_enabled">Pop-up notifications are enabled</string>
     <string name="heads_up_summary_disabled">Pop-up notifications are disabled</string>
 
+    <!-- QuickSettings Panel Transparency -->
+    <string name="qs_panel_alpha_title">Transparency</string>
+
 </resources>
