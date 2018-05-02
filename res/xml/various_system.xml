@@ -66,4 +66,11 @@
         android:summary="@string/vibration_on_charge_state_changed_summary"
         android:defaultValue="true" />
 
+    <Preference
+        android:key="chooser_activity_blacklist"
+        android:fragment="com.gzr.wolvesden.fragments.ChooserActivityBlacklist"
+        android:title="@string/chooser_activity_blacklist_title"
+        android:summary="@string/chooser_activity_blacklist_summary"
+        android:persistent="false" />
+
 </PreferenceScreen>
